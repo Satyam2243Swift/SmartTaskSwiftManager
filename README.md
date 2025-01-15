@@ -50,10 +50,26 @@ Utilized protocols and delegates for effective communication between components 
 
 
 
-Upcoming Features:
 
+
+
+
+Upcoming Features & Enhancements:
+
+
+Dark/Light Mode:
+Dark and Light mode support has been added to the application.
+Currently, this feature is hidden as additional work is required to ensure that the mode switching doesn’t negatively impact other UI elements.
+Future updates will fully enable Dark/Light mode after completing necessary adjustments and testing across the UI to ensure consistency and usability.
+
+
+Calendar Sync:
 Synchronization of tasks from the calendar to Core Data.
-Display task priorities in the user interface.
-Further code enhancements for performance optimization and better maintainability.
 
 
+Priority Display:
+Task priorities will be visually represented in the UI.
+
+
+Code Enhancements:
+Ongoing work to improve performance, scalability, and code maintainability.
