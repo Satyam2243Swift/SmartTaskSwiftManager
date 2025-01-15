@@ -5,7 +5,6 @@
 //  Created by Satyam Dixit on 14/01/25.
 //
 
-
 import UIKit
 import CoreLocation
 import CoreData
@@ -94,7 +93,6 @@ class AddTaskViewController: UIViewController {
         if let priority = task.value(forKey: "priority") as? String {
             prioritySegment.selectedSegmentIndex = priority == "High" ? 0 : (priority == "Medium" ? 1 : 2)
         }
-
     }
     
     @objc private func fetchCurrentLocation() {
@@ -120,7 +118,6 @@ class AddTaskViewController: UIViewController {
     @objc private func didTapSaveButton() {
         guard let title = titleField.text, !title.isEmpty else { return }
         
-//        let updatedPriority = prioritySegment.titleForSegment(at: prioritySegment.selectedSegmentIndex) ?? "Medium"
         let updatedPriority = (prioritySegment.selectedSegmentIndex >= 0 && prioritySegment.selectedSegmentIndex < prioritySegment.numberOfSegments)
             ? prioritySegment.titleForSegment(at: prioritySegment.selectedSegmentIndex) ?? "Medium"
             : "Medium"
@@ -136,6 +133,5 @@ class AddTaskViewController: UIViewController {
         eventManager.addEventToCalendar(title: title, startDate: updatedDueDate, endDate: updatedDueDate.addingTimeInterval(60 * 60), location: location, notes: updatedDescription)
         
         navigationController?.popToRootViewController(animated: true)
-        
     }
 }
